@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61821F52162703F00F9B3BF /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61821F42162703F00F9B3BF /* Line.swift */; };
+		F61821F72162705000F9B3BF /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61821F62162705000F9B3BF /* LineView.swift */; };
+		F61821F92162755900F9B3BF /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61821F82162755900F9B3BF /* Functions.swift */; };
 		F6581BF5215AD0BD0088F2DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6581BF4215AD0BD0088F2DF /* AppDelegate.swift */; };
 		F6581BF7215AD0BD0088F2DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6581BF6215AD0BD0088F2DF /* ViewController.swift */; };
-		F6581BFA215AD0BD0088F2DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6581BF8215AD0BD0088F2DF /* Main.storyboard */; };
 		F6581BFD215AD0BD0088F2DF /* Lab3_MaxGillespie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6581BFB215AD0BD0088F2DF /* Lab3_MaxGillespie.xcdatamodeld */; };
 		F6581BFF215AD0BE0088F2DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6581BFE215AD0BE0088F2DF /* Assets.xcassets */; };
 		F6581C02215AD0BE0088F2DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6581C00215AD0BE0088F2DF /* LaunchScreen.storyboard */; };
+		F6F87A5C21627DCC009937AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F87A5B21627DCC009937AE /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F61821F42162703F00F9B3BF /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		F61821F62162705000F9B3BF /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		F61821F82162755900F9B3BF /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		F6581BF1215AD0BD0088F2DF /* Lab3-MaxGillespie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lab3-MaxGillespie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6581BF4215AD0BD0088F2DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6581BF6215AD0BD0088F2DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F6581BF9215AD0BD0088F2DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6581BFC215AD0BD0088F2DF /* Lab3_MaxGillespie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lab3_MaxGillespie.xcdatamodel; sourceTree = "<group>"; };
 		F6581BFE215AD0BE0088F2DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6581C01215AD0BE0088F2DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6581C03215AD0BE0088F2DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6F87A5B21627DCC009937AE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,10 @@
 			children = (
 				F6581BF4215AD0BD0088F2DF /* AppDelegate.swift */,
 				F6581BF6215AD0BD0088F2DF /* ViewController.swift */,
-				F6581BF8215AD0BD0088F2DF /* Main.storyboard */,
+				F61821F42162703F00F9B3BF /* Line.swift */,
+				F61821F62162705000F9B3BF /* LineView.swift */,
+				F61821F82162755900F9B3BF /* Functions.swift */,
+				F6F87A5B21627DCC009937AE /* Main.storyboard */,
 				F6581BFE215AD0BE0088F2DF /* Assets.xcassets */,
 				F6581C00215AD0BE0088F2DF /* LaunchScreen.storyboard */,
 				F6581C03215AD0BE0088F2DF /* Info.plist */,
@@ -125,9 +134,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F87A5C21627DCC009937AE /* Main.storyboard in Resources */,
 				F6581C02215AD0BE0088F2DF /* LaunchScreen.storyboard in Resources */,
 				F6581BFF215AD0BE0088F2DF /* Assets.xcassets in Resources */,
-				F6581BFA215AD0BD0088F2DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,22 +148,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6581BF7215AD0BD0088F2DF /* ViewController.swift in Sources */,
+				F61821F52162703F00F9B3BF /* Line.swift in Sources */,
 				F6581BFD215AD0BD0088F2DF /* Lab3_MaxGillespie.xcdatamodeld in Sources */,
+				F61821F72162705000F9B3BF /* LineView.swift in Sources */,
 				F6581BF5215AD0BD0088F2DF /* AppDelegate.swift in Sources */,
+				F61821F92162755900F9B3BF /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F6581BF8215AD0BD0088F2DF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6581BF9215AD0BD0088F2DF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F6581C00215AD0BE0088F2DF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
