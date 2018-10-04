@@ -18,11 +18,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var radiusSliderValue: UISlider!
     
     
-    @IBAction func radiusSliderDidChange(_ sender: Any) {
-        if radiusSliderValue != nil {
-            lineRadius = CGFloat(radiusSliderValue.value*50)
-        }
-    }
     @IBAction func sliderValueDidChange(_ sender: Any) {
         lineRadius = CGFloat(radiusSliderValue.value * 30)
     }
@@ -37,26 +32,29 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func redColorSelected(_ sender: Any) {
-        currentColor = UIColor.red
+        currentColor = UIColor(displayP3Red: 1, green: 0, blue: 0, alpha: CGFloat(alphaSliderValue.value))
     }
     @IBAction func orangeSelected(_ sender: Any) {
-        currentColor = UIColor.orange
+        currentColor = UIColor(displayP3Red: 1, green: 0.5, blue: 0, alpha: CGFloat(alphaSliderValue.value))
     }
     @IBAction func yellowSelected(_ sender: Any) {
-        currentColor = UIColor.yellow
+        currentColor = UIColor(displayP3Red: 1, green: 1, blue: 0, alpha: CGFloat(alphaSliderValue.value))
+
     }
     @IBAction func greenSelected(_ sender: Any) {
-        currentColor = UIColor(displayP3Red: 0.19, green: 0.83, blue: 0.22, alpha: 1)
+        currentColor = UIColor(displayP3Red: 0.19, green: 0.83, blue: 0.22, alpha: CGFloat(alphaSliderValue.value))
     }
     @IBAction func blueSelected(_ sender: Any) {
-        currentColor = UIColor(displayP3Red: 0.42, green: 0.70, blue: 0.86, alpha: 1)
+        currentColor = UIColor(displayP3Red: 0.42, green: 0.70, blue: 0.86, alpha: CGFloat(alphaSliderValue.value))
     }
-    @IBAction func purpleSelected(_ sender: Any) {
-        currentColor = UIColor(displayP3Red: 0.49, green: 0.25, blue: 0.83, alpha: 1)
+    
+    
+    
+    @IBOutlet weak var alphaSliderValue: UISlider!
+    @IBAction func alphaSliderDidChange(_ sender: Any) {
+        currentColor = currentColor?.withAlphaComponent(CGFloat(alphaSliderValue.value))
     }
-    @IBAction func violetSelected(_ sender: Any) {
-        currentColor = UIColor(displayP3Red: 0.85, green: 0.66, blue: 1, alpha: 1)
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +72,7 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         var touchPoint = (touches.first)!.location(in: view) as CGPoint
-        touchPoint.y -= 50
+        touchPoint.y -= 60
         
         currentLine = Line(color: currentColor!, radius: lineRadius!, points: [])
         LineCanvas.lines.append(currentLine!)
@@ -82,7 +80,7 @@ class ViewController: UIViewController {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         var touchPoint = (touches.first)!.location(in: view) as CGPoint
-        touchPoint.y -= 50
+        touchPoint.y -= 60
         
         if currentLine != nil {
             currentLine!.points.append(touchPoint)

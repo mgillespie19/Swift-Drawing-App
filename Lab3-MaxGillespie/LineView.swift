@@ -76,6 +76,9 @@ class LineView:UIView {
         }
         guard let lastLocation = points.last else { return path }
         path.addLine(to: lastLocation)
+        
+        path.lineCapStyle = .round
+        
         return path
     }
     
@@ -88,7 +91,6 @@ class LineView:UIView {
             line.color.setStroke()
             fillPath.lineWidth = line.radius
             fillPath.stroke()
-            //CGContextSetLineWidth(context, 20)
         }
         if (theLine != nil) {
             drawLine(theLine!)
