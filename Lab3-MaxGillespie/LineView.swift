@@ -61,7 +61,8 @@ class LineView:UIView {
         path.move(to: firstPoint)
         
         // ADDED:
-        path.addArc(withCenter: firstMidpoint, radius: radius, startAngle: 0, endAngle: CGFloat(2*Double.pi), clockwise: true)
+        path.addQuadCurve(to: secondPoint, controlPoint: firstMidpoint)
+        
         // print (secondPoint, firstMidpoint)
         
         path.addLine(to: firstMidpoint)
@@ -71,11 +72,10 @@ class LineView:UIView {
             let midPoint = midpoint(first: currentPoint, second: nextPoint)
             
             //ADDED:
-            // print (currentPoint, midpoint)
-            path.addArc(withCenter: midPoint, radius: radius, startAngle: 0, endAngle: CGFloat(2*Double.pi), clockwise: true)
+            path.addQuadCurve(to: nextPoint, controlPoint: midPoint)
         }
         guard let lastLocation = points.last else { return path }
-        path.addArc(withCenter: lastLocation, radius: radius, startAngle: 0, endAngle: CGFloat(2*Double.pi), clockwise: true)
+        path.addLine(to: lastLocation)
         return path
     }
     
@@ -84,11 +84,9 @@ class LineView:UIView {
     override func draw(_ rect: CGRect) {
         
         for line in lines {
-            drawLine(line)
-        
             let fillPath = createQuadPath(points: line.points, radius: line.radius)
             line.color.setStroke()
-            fillPath.lineWidth = 8
+            fillPath.lineWidth = line.radius
             fillPath.stroke()
             //CGContextSetLineWidth(context, 20)
         }
